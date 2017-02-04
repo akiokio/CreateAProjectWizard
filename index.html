@@ -68,9 +68,9 @@
       <div class="step-1">
         <div class="columns">
           <div class="column is-half">
-          <label class="label">Project name</label>
+          <label class="label" for="projectName">Project name</label>
           <p class="control">
-            <input name="projectName" class="input" type="text" placeholder="Project name">
+            <input id="projectName" name="projectName" class="input" type="text" placeholder="Project name">
           </p>
           <label class="label">Project type</label>
           <p class="control">
@@ -83,31 +83,31 @@
               </select>
             </span>
           </p>
-          <label class="label">Source control url</label>
+          <label class="label" for="svcUrl">Source control url</label>
           <p class="control">
-            <input name="svcUrl" class="input" type="url" placeholder="Source control url">
+            <input id="svcUrl" name="svcUrl" class="input" type="url" placeholder="Source control url">
           </p>
-          <label class="label">Trask management url</label>
+          <label class="label" for="taskManagementUrl">Trask management url</label>
           <p class="control">
-            <input name="taskManagementUrl" class="input" type="url" placeholder="Trask management url">
+            <input id="taskManagementUrl" name="taskManagementUrl" class="input" type="url" placeholder="Trask management url">
           </p>
-          <label class="label">Domain url</label>
+          <label class="label" for="domainUrl">Domain url</label>
           <p class="control">
-            <input name="domainUrl" class="input" type="url" placeholder="Domain url">
+            <input id="domainUrl" name="domainUrl" class="input" type="url" placeholder="Domain url">
           </p>
         </div>
         <div class="column is-half">
-          <label class="label">Description (it can be short) 😄</label>
+          <label class="label" for="description">Description (it can be short) 😄</label>
           <p class="control">
-            <textarea class="textarea" placeholder="Description"></textarea>
+            <textarea id="description" name="description" class="textarea" placeholder="Description"></textarea>
           </p>
-          <label class="label">Start Date</label>
+          <label class="label" for="startDate">Start Date</label>
           <p class="control">
-            <input name="startDate" class="input" type="date" placeholder="Start Date">
+            <input id="startDate" name="startDate" class="input" type="date" placeholder="Start Date" min="2017-01-01">
           </p>
-          <label class="label">End Date</label>
+          <label class="label" for="endDate">End Date</label>
           <p class="control">
-            <input name="endDate" class="input" type="date" placeholder="End Date">
+            <input id="endDate" name="endDate" class="input" type="date" placeholder="End Date" min="2017-01-01">
           </p>
         </div>
         </div>
@@ -115,13 +115,13 @@
       <div class="step-2">
         <div class="columns">
           <div class="column is-4">
-            <label class="label">Who is going to work with you on this project?</label>
+            <label class="label" for="newColaboratorEmail">Who is going to work with you on this project?</label>
             <p class="control">
-              <input name="projectName" class="input" type="email" placeholder="Colaborator email">
+              <input id="newColaboratorEmail" name="newColaboratorEmail" class="input" type="email" placeholder="Colaborator email">
             </p>
             <p class="control">
               <label class="checkbox">
-                <input type="checkbox">Notify?
+                <input name="shouldNotifyNewColaborator" type="checkbox">Notify?
               </label>
             </p>
             <div class="control is-grouped">
