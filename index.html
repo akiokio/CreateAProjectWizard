@@ -30,23 +30,23 @@
 
 <div class="tabs is-centered is-medium">
   <ul>
-    <li class="is-active"><a>
+    <li class="step step-0"><a>
         <span class="icon is-small"><i class="fa fa-info"></i></span>
         <span>Basic Info</span>
     </a></li>
-    <li><a>
+    <li class="step step-1"><a>
         <span class="icon is-small"><i class="fa fa-users"></i></span>
         <span>Collaborators</span>
     </a></li>
-    <li><a>
+    <li class="step step-2"><a>
         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
         <span>Milestones</span>
     </a></li>
-    <li><a>
+    <li class="step step-3"><a>
         <span class="icon is-small"><i class="fa fa-list-alt"></i></span>
         <span>Checklist</span>
       </a></li>
-    <li><a>
+    <li class="step step-4"><a>
         <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
         <span>Review</span>
     </a></li>
@@ -114,24 +114,30 @@
       </div>
       <div class="step-2">
         <div class="columns">
-          <div class="column is-4">
+          <div class="column is-half">
             <label class="label" for="newColaboratorEmail">Who is going to work with you on this project?</label>
             <p class="control">
               <input id="newColaboratorEmail" name="newColaboratorEmail" class="input" type="email" placeholder="Colaborator email">
             </p>
             <p class="control">
               <label class="checkbox">
-                <input name="shouldNotifyNewColaborator" type="checkbox">Notify?
+                <input id="shouldNotifyNewColaborator" name="shouldNotifyNewColaborator" type="checkbox">Notify?
               </label>
             </p>
             <div class="control is-grouped">
               <p class="control">
-                <button class="button is-primary">Add</button>
+                <button class="button is-primary addColaborator">Add</button>
               </p>
             </div>
           </div>
+          <div class="column is-half right-column">
+            <div class="colaborators-list"></div>
+          </div>
         </div>
       </div>
+      <div class="step-3"></div>
+      <div class="step-4"></div>
+      <div class="step-5"></div>
     </div>
     <siv class="columns">
       <div class="column controls">
