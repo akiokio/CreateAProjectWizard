@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create a project wizard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="nav has-shadow">
+  <div class="nav-left">
+    <a class="nav-item"><i class="fa fa-building" aria-hidden="true"></i> YOUR COMPANY</a>
+  </div>
+  <div class="nav-center">
+  </div>
+  <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+  <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+  <span class="nav-toggle">
+    <span></span><span></span><span></span>
+  </span>
+  <!-- This "nav-menu" is hidden on mobile -->
+  <!-- Add the modifier "is-active" to display it on mobile -->
+  <div class="nav-right nav-menu">
+    <a class="nav-item">Home</a>
+    <a class="nav-item">Dashboard</a>
+    <a class="nav-item">Support</a>
+  </div>
+</nav>
+
+<div class="tabs is-centered is-medium">
+  <ul>
+    <li class="is-active"><a>
+        <span class="icon is-small"><i class="fa fa-info"></i></span>
+        <span>Basic Info</span>
+    </a></li>
+    <li><a>
+        <span class="icon is-small"><i class="fa fa-users"></i></span>
+        <span>Collaborators</span>
+    </a></li>
+    <li><a>
+        <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
+        <span>Milestones</span>
+    </a></li>
+    <li><a>
+        <span class="icon is-small"><i class="fa fa-list-alt"></i></span>
+        <span>Checklist</span>
+      </a></li>
+    <li><a>
+        <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
+        <span>Review</span>
+    </a></li>
+  </ul>
+</div>
+<div class="container">
+  <progress class="progress is-primary" value="20" max="100">20%</progress>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="heading">
+      <h2 class="subtitle">
+        If you are unsure about some of the information, it's ok you can change later.
+      </h2>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <label class="label">Project name</label>
+        <p class="control">
+          <input name="projectName" class="input" type="text" placeholder="Project name">
+        </p>
+        <label class="label">Project type</label>
+        <p class="control">
+          <span class="select">
+            <select name="projectType">
+              <option>Website</option>
+              <option>Mobile App</option>
+              <option>Layout</option>
+              <option>Other</option>
+            </select>
+          </span>
+        </p>
+        <label class="label">Source control url</label>
+        <p class="control">
+          <input name="svcUrl" class="input" type="url" placeholder="Source control url">
+        </p>
+        <label class="label">Trask management url</label>
+        <p class="control">
+          <input name="taskManagementUrl" class="input" type="url" placeholder="Trask management url">
+        </p>
+        <label class="label">Domain url</label>
+        <p class="control">
+          <input name="domainUrl" class="input" type="url" placeholder="Domain url">
+        </p>
+      </div>
+      <div class="column">
+        <label class="label">Description (it can be short) 😄</label>
+        <p class="control">
+          <textarea class="textarea" placeholder="Description"></textarea>
+        </p>
+        <label class="label">Start Date</label>
+        <p class="control">
+          <input name="startDate" class="input" type="date" placeholder="Start Date">
+        </p>
+        <label class="label">End Date</label>
+        <p class="control">
+          <input name="endDate" class="input" type="date" placeholder="End Date">
+        </p>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <a class="button is-primary is-pulled-right">Next</a>    
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Create A Project Wizard</strong> by <a href="http://akiosakae.com">Guilherme Akio Sakae</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+      </p>
+      <p>
+        <a class="icon" href="https://github.com/akiokio/CreateAProjectWizard">
+          <i class="fa fa-github"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
