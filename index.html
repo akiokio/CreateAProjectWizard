@@ -4,6 +4,7 @@
   <title>Create a project wizard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 
@@ -51,66 +52,93 @@
     </a></li>
   </ul>
 </div>
-<div class="container">
-  <progress class="progress is-primary" value="20" max="100">20%</progress>
-</div>
-<section class="section">
+<section class="section progess-section">
+  <div class="container">
+    <progress class="progress is-primary" value="0" max="100"></progress>
+  </div>
+</section>
+<section class="section content-section">
   <div class="container">
     <div class="heading">
       <h2 class="subtitle">
         If you are unsure about some of the information, it's ok you can change later.
       </h2>
     </div>
-    <div class="columns">
-      <div class="column">
-        <label class="label">Project name</label>
-        <p class="control">
-          <input name="projectName" class="input" type="text" placeholder="Project name">
-        </p>
-        <label class="label">Project type</label>
-        <p class="control">
-          <span class="select">
-            <select name="projectType">
-              <option>Website</option>
-              <option>Mobile App</option>
-              <option>Layout</option>
-              <option>Other</option>
-            </select>
-          </span>
-        </p>
-        <label class="label">Source control url</label>
-        <p class="control">
-          <input name="svcUrl" class="input" type="url" placeholder="Source control url">
-        </p>
-        <label class="label">Trask management url</label>
-        <p class="control">
-          <input name="taskManagementUrl" class="input" type="url" placeholder="Trask management url">
-        </p>
-        <label class="label">Domain url</label>
-        <p class="control">
-          <input name="domainUrl" class="input" type="url" placeholder="Domain url">
-        </p>
+    <div class="siema">
+      <div class="step-1">
+        <div class="columns">
+          <div class="column is-half">
+          <label class="label">Project name</label>
+          <p class="control">
+            <input name="projectName" class="input" type="text" placeholder="Project name">
+          </p>
+          <label class="label">Project type</label>
+          <p class="control">
+            <span class="select">
+              <select name="projectType">
+                <option>Website</option>
+                <option>Mobile App</option>
+                <option>Layout</option>
+                <option>Other</option>
+              </select>
+            </span>
+          </p>
+          <label class="label">Source control url</label>
+          <p class="control">
+            <input name="svcUrl" class="input" type="url" placeholder="Source control url">
+          </p>
+          <label class="label">Trask management url</label>
+          <p class="control">
+            <input name="taskManagementUrl" class="input" type="url" placeholder="Trask management url">
+          </p>
+          <label class="label">Domain url</label>
+          <p class="control">
+            <input name="domainUrl" class="input" type="url" placeholder="Domain url">
+          </p>
+        </div>
+        <div class="column is-half">
+          <label class="label">Description (it can be short) 😄</label>
+          <p class="control">
+            <textarea class="textarea" placeholder="Description"></textarea>
+          </p>
+          <label class="label">Start Date</label>
+          <p class="control">
+            <input name="startDate" class="input" type="date" placeholder="Start Date">
+          </p>
+          <label class="label">End Date</label>
+          <p class="control">
+            <input name="endDate" class="input" type="date" placeholder="End Date">
+          </p>
+        </div>
+        </div>
       </div>
-      <div class="column">
-        <label class="label">Description (it can be short) 😄</label>
-        <p class="control">
-          <textarea class="textarea" placeholder="Description"></textarea>
-        </p>
-        <label class="label">Start Date</label>
-        <p class="control">
-          <input name="startDate" class="input" type="date" placeholder="Start Date">
-        </p>
-        <label class="label">End Date</label>
-        <p class="control">
-          <input name="endDate" class="input" type="date" placeholder="End Date">
-        </p>
+      <div class="step-2">
+        <div class="columns">
+          <div class="column is-4">
+            <label class="label">Who is going to work with you on this project?</label>
+            <p class="control">
+              <input name="projectName" class="input" type="email" placeholder="Colaborator email">
+            </p>
+            <p class="control">
+              <label class="checkbox">
+                <input type="checkbox">Notify?
+              </label>
+            </p>
+            <div class="control is-grouped">
+              <p class="control">
+                <button class="button is-primary">Add</button>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="columns">
-      <div class="column">
-        <a class="button is-primary is-pulled-right">Next</a>    
+    <siv class="columns">
+      <div class="column controls">
+        <a class="button is-primary is-pulled-left is-large prev">Previous</a>
+        <a class="button is-primary is-pulled-right is-large next">Next</a>        
       </div>
-    </div>
+    </siv>
   </div>
 </section>
 
@@ -130,6 +158,7 @@
     </div>
   </div>
 </footer>
-
+<script src="libs/siema/siema.min.js"></script>
+<script src="js/global.js"></script>
 </body>
 </html>

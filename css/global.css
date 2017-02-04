@@ -1,0 +1,12 @@
+.progess-section,
+.content-section {
+  padding: 0.75em 1.5em;
+}
+
+.heading {
+  margin: 2em 0;
+}
+
+.controls {
+  margin: 30px 0;
+}
