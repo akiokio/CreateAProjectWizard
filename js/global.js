@@ -1,4 +1,5 @@
 (() => {
+  // Siema slider
   const progress = document.querySelector('.progress');
   const updateProgress = (currentIndex) => {
     progress.value = (currentIndex / 4) * 100;
@@ -13,7 +14,11 @@
   });
   document.querySelector('.prev').addEventListener('click', () => mySiema.prev(updateProgress));
   document.querySelector('.next').addEventListener('click', () => mySiema.next(updateProgress));
+  
+  // Menu click
+  document.querySelectorAll('.step').forEach((s) => s.addEventListener('click', () => mySiema.goTo(s.dataset.step, updateProgress)));
 
+  // Add colaborator button
   const addColabButton = document.querySelector('.addColaborator');
   const colaboratorsList = document.querySelector('.colaborators-list');
   addColabButton.addEventListener('click', () => {
