@@ -55,7 +55,7 @@
 
   const mySiema = new Siema({
     draggable: false,
-    startIndex: lastSlideIndex,
+    startIndex: 0,
     initCallback: updateProgress,
     dragCallback: updateProgress,
   });
