@@ -8,7 +8,7 @@
   };
   const mySiema = new Siema({
     draggable: false,
-    startIndex: 2,
+    startIndex: 3,
     initCallback: updateProgress,
     dragCallback: updateProgress,
   });
@@ -30,6 +30,7 @@
     <p class="vertical-center">
       <i class="fa fa-user" aria-hidden="true"></i>&nbsp;
       ${colaboratorEmail.value} - ${colaboratorNotify.checked ? 'Will': 'Will not'} notify
+      &nbsp;<a class="delete is-small"></a>
     </p></div>`;
     colaboratorEmail.value = '';
     colaboratorNotify.checked = false;
@@ -48,8 +49,9 @@
         || milestoneDescription.value === '') { return alert('Cannot be blank'); }
     milestonesList.innerHTML +=`<div>
       <p class="vertical-center"><i class="fa fa-bolt" aria-hidden="true"></i>&nbsp;${milestoneName.value}&nbsp;-&nbsp;
-      <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;${milestoneDueDate.value}</p>
-    </div>`;
+      <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;${milestoneDueDate.value}
+      &nbsp;<a class="delete is-small"></a>
+      </p></div>`;
     milestoneName.value = '';
     milestoneDueDate.value = '';
     milestoneDescription.value = '';
