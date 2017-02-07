@@ -75,10 +75,10 @@
           <label class="label">Project type</label>
           <p class="control">
             <span class="select">
-              <select name="projectType">
+              <select id="projectType" name="projectType">
                 <option>Website</option>
                 <option>Mobile App</option>
-                <option>Layout</option>
+                <option>Design</option>
                 <option>Other</option>
               </select>
             </span>
@@ -172,88 +172,117 @@
             </article>
           </div>
           <div class="column is-half">
-            <label class="label">Is the design ready?</label>
-            <p class="control"><span class="select">
-                <select>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-            </span></p>
-
-            <label class="label">Is the domain bought?</label>
-            <p class="control"><span class="select">
-                <select>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-            </span></p>
-
-            <label class="label">Is the hosting ready?</label>
-            <p class="control"><span class="select">
-                <select>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-            </span></p>
-
-            <label class="label">Is the landing page done?</label>
-            <p class="control"><span class="select">
-                <select>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-            </span></p>
+            <div class="checklist-question">
+              <label class="label">Is the design ready?</label>
+              <p class="control"><span class="select">
+                  <select>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </span></p>
+            </div>
+            <div class="checklist-question">
+              <label class="label">Is the domain bought?</label>
+              <p class="control"><span class="select">
+                  <select>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </span></p>
+            </div>
+            <div class="checklist-question">
+              <label class="label">Is the hosting ready?</label>
+              <p class="control"><span class="select">
+                  <select>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </span></p>
+            </div>
+            <div class="checklist-question">
+              <label class="label">Is the landing page done?</label>
+              <p class="control"><span class="select">
+                  <select>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </span></p>
+            </div>
           </div>
 
           <div class="column is-half">
-            <label class="label">Are the social media channels created?</label>
-            <p class="control"><span class="select">
-                <select>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-            </span></p>
-
-            <label class="label">Are the team emails created?</label>
-            <p class="control"><span class="select">
-                <select>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-            </span></p>
-
-            <label class="label">Was the website proper tested?</label>
-            <p class="control"><span class="select">
-                <select>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-            </span></p>
-
-            <label class="label">Are the backup routines in place?</label>
-            <p class="control"><span class="select">
-                <select>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-            </span></p>
+            <div class="checklist-question">
+              <label class="label">Are the social media channels created?</label>
+              <p class="control"><span class="select">
+                  <select>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </span></p>
+            </div>
+            <div class="checklist-question">
+              <label class="label">Are the team emails created?</label>
+              <p class="control"><span class="select">
+                  <select>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </span></p>
+            </div>
+            <div class="checklist-question">
+              <label class="label">Was the website proper tested?</label>
+              <p class="control"><span class="select">
+                  <select>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </span></p>
+            </div>
+            <div class="checklist-question">
+              <label class="label">Are the backup routines in place?</label>
+              <p class="control"><span class="select">
+                  <select>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </span></p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="step-5"></div>
+      <div class="step-5">
+        <div class="columns">
+          <div class="column is-half">
+            <p class="review-name"><strong>Name:</strong> &nbsp; <span class="value"></span></p>
+            <p class="review-type"><strong>Type Name:</strong> &nbsp; <span class="value"></span></p>
+            <p class="review-sourceControlUrl"><strong>Source Control Url:</strong> &nbsp; <span class="value"></span></p>
+            <p class="review-taskManagementUrl"><strong>Task Management Url:</strong> &nbsp; <span class="value"></span></p>
+            <p class="review-domainUrl"><strong>Domain Url:</strong> &nbsp; <span class="value"></span></p>
+            <p class="review-description"><strong>Description:</strong> &nbsp; <span class="value"></span></p>
+            <p class="review-startDate"><strong>Start Date:</strong> &nbsp; <span class="value"></span></p>
+            <p class="review-endDate"><strong>End Date:</strong> &nbsp; <span class="value"></span></p>
+          </div>
+          <div class="column is-half">
+            <p class="review-colaboratorList"><strong>Colaborator List:</strong> &nbsp; <br><span class="value ident-1"></span></p>
+            <p class="review-milestoneList"><strong>Milestone Url:</strong> &nbsp; <br><span class="value ident-1"></span></p>
+            <p class="review-checklist"><strong>Checklist:</strong> &nbsp; <br><span class="value ident-1"></span></p>
+          </div>
+        </div>
+      </div>
     </div>
     <siv class="columns">
       <div class="column controls">
         <a class="button is-primary is-pulled-left is-large prev">Previous</a>
-        <a class="button is-primary is-pulled-right is-large next">Next</a>        
+        <a class="button is-primary is-pulled-right is-large next">Next</a>      
+        <a class="button is-success is-pulled-right is-large finish">Finish</a>      
       </div>
     </siv>
   </div>

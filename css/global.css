@@ -33,3 +33,8 @@
 .right-column {
   border-left: 1px solid #dbdbdb;
 }
+
+.ident-1 {
+  display: block;
+  padding-left: 15px; 
+}
