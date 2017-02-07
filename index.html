@@ -10,7 +10,7 @@
 
 <nav class="nav has-shadow">
   <div class="nav-left">
-    <a class="nav-item"><i class="fa fa-building" aria-hidden="true"></i> YOUR COMPANY</a>
+    <a class="nav-item"><i class="fa fa-building" aria-hidden="true"></i>&nbsp;&nbsp;YOUR COMPANY</a>
   </div>
   <div class="nav-center">
   </div>
@@ -126,7 +126,7 @@
             </p>
             <div class="control is-grouped">
               <p class="control">
-                <button class="button is-primary addColaborator">Add</button>
+                <button class="button is-info addColaborator">Add</button>
               </p>
             </div>
           </div>
@@ -135,7 +135,32 @@
           </div>
         </div>
       </div>
-      <div class="step-3"></div>
+      <div class="step-3">
+        <div class="columns">
+          <div class="column is-half">
+            <label class="label" for="milestoneName">Milestone name</label>
+            <p class="control">
+              <input id="milestoneName" name="milestoneName" class="input" type="text" placeholder="Project name">
+            </p>
+            <label class="label" for="milestoneDueDate">Due Date</label>
+            <p class="control">
+              <input id="milestoneDueDate" name="milestoneDueDate" class="input" type="date" placeholder="End Date" min="2017-01-01">
+            </p>
+            <label class="label" for="milestoneDescription">Description</label>
+            <p class="control">
+              <textarea id="milestoneDescription" name="milestoneDescription" class="textarea" placeholder="Description"></textarea>
+            </p>
+            <div class="control is-grouped">
+              <p class="control">
+                <button class="button is-info addMilestone">Add</button>
+              </p>
+            </div>
+          </div>
+          <div class="column is-half right-column">
+            <div class="milestone-list"></div>
+          </div>
+        </div>
+      </div>
       <div class="step-4"></div>
       <div class="step-5"></div>
     </div>
