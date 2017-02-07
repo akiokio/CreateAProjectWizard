@@ -17,10 +17,10 @@
 .content-section {
   padding: 0.75em 1.5em;
 }
-
+/*
 .content-section {
   min-height: 650px;
-}
+}*/
 
 .heading {
   margin: 2em 0;
@@ -37,4 +37,26 @@
 .ident-1 {
   display: block;
   padding-left: 15px; 
+}
+
+@media (max-width: 768px) {
+  .tabs:not(:last-child) {
+    margin: 0;
+  }
+
+  .tabs ul {
+    flex-flow: column;
+  }
+
+  .tabs li {
+    width: 100%;
+  }
+
+  .tabs a {
+    padding: 0.2em 0em;
+  }
+
+  .heading {
+    margin: 0;
+  }
 }
