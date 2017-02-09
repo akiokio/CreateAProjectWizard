@@ -10,7 +10,7 @@
 
 <nav class="nav has-shadow">
   <div class="nav-left">
-    <a class="nav-item"><i class="fa fa-building" aria-hidden="true"></i>&nbsp;&nbsp;YOUR COMPANY</a>
+    <a class="nav-item"><i class="fa fa-building" aria-hidden="true"></i>&nbsp;&nbsp;CREATE A PROJECT WIZARD</a>
   </div>
   <div class="nav-center">
   </div>
@@ -64,227 +64,230 @@
         If you are unsure about some of the information, it's ok you can change later.
       </h2>
     </div>
-    <div class="siema">
-      <div class="step-1">
-        <div class="columns">
-          <div class="column is-half">
-          <label class="label" for="projectName">Project name</label>
-          <p class="control">
-            <input id="projectName" name="projectName" class="input" type="text" placeholder="Project name">
-          </p>
-          <label class="label">Project type</label>
-          <p class="control">
-            <span class="select">
-              <select id="projectType" name="projectType">
-                <option>Website</option>
-                <option>Mobile App</option>
-                <option>Design</option>
-                <option>Other</option>
-              </select>
-            </span>
-          </p>
-          <label class="label" for="svcUrl">Source control url</label>
-          <p class="control">
-            <input id="svcUrl" name="svcUrl" class="input" type="url" placeholder="Source control url">
-          </p>
-          <label class="label" for="taskManagementUrl">Trask management url</label>
-          <p class="control">
-            <input id="taskManagementUrl" name="taskManagementUrl" class="input" type="url" placeholder="Trask management url">
-          </p>
-          <label class="label" for="domainUrl">Domain url</label>
-          <p class="control">
-            <input id="domainUrl" name="domainUrl" class="input" type="url" placeholder="Domain url">
-          </p>
-        </div>
-        <div class="column is-half">
-          <label class="label" for="description">Description (it can be short) 😄</label>
-          <p class="control">
-            <textarea id="description" name="description" class="textarea" placeholder="Description"></textarea>
-          </p>
-          <label class="label" for="startDate">Start Date</label>
-          <p class="control">
-            <input id="startDate" name="startDate" class="input" type="date" placeholder="Start Date" min="2017-01-01">
-          </p>
-          <label class="label" for="endDate">End Date</label>
-          <p class="control">
-            <input id="endDate" name="endDate" class="input" type="date" placeholder="End Date" min="2017-01-01">
-          </p>
-        </div>
-        </div>
-      </div>
-      <div class="step-2">
-        <div class="columns">
-          <div class="column is-half">
-            <label class="label" for="newColaboratorEmail">Who is going to work with you on this project?</label>
+    <form id="projectForm" name="projectForm" action="" method="POST">
+      <div class="siema">
+        <div class="step-1">
+          <div class="columns">
+            <div class="column is-half">
+            <label class="label" for="projectName">Project name</label>
             <p class="control">
-              <input id="newColaboratorEmail" name="newColaboratorEmail" class="input" type="email" placeholder="Colaborator email">
+              <input id="projectName" name="projectName" class="input" type="text" placeholder="Project name">
             </p>
+            <label class="label">Project type</label>
             <p class="control">
-              <label class="checkbox">
-                <input id="shouldNotifyNewColaborator" name="shouldNotifyNewColaborator" type="checkbox">Notify?
-              </label>
+              <span class="select">
+                <select id="projectType" name="projectType">
+                  <option>Website</option>
+                  <option>Mobile App</option>
+                  <option>Design</option>
+                  <option>Other</option>
+                </select>
+              </span>
             </p>
-            <div class="control is-grouped">
+            <label class="label" for="svcUrl">Source control url</label>
+            <p class="control">
+              <input id="svcUrl" name="svcUrl" class="input" type="text" placeholder="Source control url">
+            </p>
+            <label class="label" for="taskManagementUrl">Trask management url</label>
+            <p class="control">
+              <input id="taskManagementUrl" name="taskManagementUrl" class="input" type="text" placeholder="Trask management url">
+            </p>
+            <label class="label" for="domainUrl">Domain url</label>
+            <p class="control">
+              <input id="domainUrl" name="domainUrl" class="input" type="text" placeholder="Domain url">
+            </p>
+          </div>
+          <div class="column is-half">
+            <label class="label" for="description">Description (it can be short) 😄</label>
+            <p class="control">
+              <textarea id="description" name="description" class="textarea" placeholder="Description"></textarea>
+            </p>
+            <label class="label" for="startDate">Start Date</label>
+            <p class="control">
+              <input id="startDate" name="startDate" class="input" type="date" placeholder="Start Date" min="2017-01-01">
+            </p>
+            <label class="label" for="endDate">End Date</label>
+            <p class="control">
+              <input id="endDate" name="endDate" class="input" type="date" placeholder="End Date" min="2017-01-01">
+            </p>
+          </div>
+          </div>
+        </div>
+        <div class="step-2">
+          <div class="columns">
+            <div class="column is-half">
+              <label class="label" for="newColaboratorEmail">Who is going to work with you on this project?</label>
               <p class="control">
-                <button class="button is-info addColaborator">Add</button>
+                <input id="newColaboratorEmail" name="newColaboratorEmail" class="input" type="email" placeholder="Colaborator email">
               </p>
-            </div>
-          </div>
-          <div class="column is-half right-column">
-            <div class="colaborators-list"></div>
-          </div>
-        </div>
-      </div>
-      <div class="step-3">
-        <div class="columns">
-          <div class="column is-half">
-            <label class="label" for="milestoneName">Milestone name</label>
-            <p class="control">
-              <input id="milestoneName" name="milestoneName" class="input" type="text" placeholder="Project name">
-            </p>
-            <label class="label" for="milestoneDueDate">Due Date</label>
-            <p class="control">
-              <input id="milestoneDueDate" name="milestoneDueDate" class="input" type="date" placeholder="End Date" min="2017-01-01">
-            </p>
-            <label class="label" for="milestoneDescription">Description</label>
-            <p class="control">
-              <textarea id="milestoneDescription" name="milestoneDescription" class="textarea" placeholder="Description"></textarea>
-            </p>
-            <div class="control is-grouped">
               <p class="control">
-                <button class="button is-info addMilestone">Add</button>
+                <label class="checkbox">
+                  <input id="shouldNotifyNewColaborator" name="shouldNotifyNewColaborator" type="checkbox">Notify?
+                </label>
               </p>
-            </div>
-          </div>
-          <div class="column is-half right-column">
-            <div class="milestone-list"></div>
-          </div>
-        </div>
-      </div>
-      <div class="step-4">
-        <div class="columns is-multiline">
-          <div class="column is-12">
-            <article class="message is-info">
-              <div class="message-header">
-                <p>Info</p>
+              <div class="control is-grouped">
+                <p class="control">
+                  <button class="button is-info addColaborator">Add</button>
+                </p>
               </div>
-              <div class="message-body">Don't forget anything before the launch following this checklist, this will be available to change anytime later.</div>
-            </article>
-          </div>
-          <div class="column is-half">
-            <div class="checklist-question">
-              <label class="label">Is the design ready?</label>
-              <p class="control"><span class="select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-              </span></p>
             </div>
-            <div class="checklist-question">
-              <label class="label">Is the domain bought?</label>
-              <p class="control"><span class="select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-              </span></p>
-            </div>
-            <div class="checklist-question">
-              <label class="label">Is the hosting ready?</label>
-              <p class="control"><span class="select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-              </span></p>
-            </div>
-            <div class="checklist-question">
-              <label class="label">Is the landing page done?</label>
-              <p class="control"><span class="select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-              </span></p>
+            <div class="column is-half right-column">
+              <div class="colaborators-list"></div>
             </div>
           </div>
+        </div>
+        <div class="step-3">
+          <div class="columns">
+            <div class="column is-half">
+              <label class="label" for="milestoneName">Milestone name</label>
+              <p class="control">
+                <input id="milestoneName" name="milestoneName" class="input" type="text" placeholder="Project name">
+              </p>
+              <label class="label" for="milestoneDueDate">Due Date</label>
+              <p class="control">
+                <input id="milestoneDueDate" name="milestoneDueDate" class="input" type="date" placeholder="End Date" min="2017-01-01">
+              </p>
+              <label class="label" for="milestoneDescription">Description</label>
+              <p class="control">
+                <textarea id="milestoneDescription" name="milestoneDescription" class="textarea" placeholder="Description"></textarea>
+              </p>
+              <div class="control is-grouped">
+                <p class="control">
+                  <button class="button is-info addMilestone">Add</button>
+                </p>
+              </div>
+            </div>
+            <div class="column is-half right-column">
+              <div class="milestone-list"></div>
+            </div>
+          </div>
+        </div>
+        <div class="step-4">
+          <div class="columns is-multiline">
+            <div class="column is-12">
+              <article class="message is-info">
+                <div class="message-header">
+                  <p>Info</p>
+                </div>
+                <div class="message-body">Don't forget anything before the launch following this checklist, this will be available to change anytime later.</div>
+              </article>
+            </div>
+            <div class="column is-half">
+              <div class="checklist-question">
+                <label class="label">Is the design ready?</label>
+                <p class="control"><span class="select">
+                    <select name="designReady" id="designReady">
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                </span></p>
+              </div>
+              <div class="checklist-question">
+                <label class="label">Is the domain bought?</label>
+                <p class="control"><span class="select">
+                    <select name="domainBought" id="domainBought">
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                </span></p>
+              </div>
+              <div class="checklist-question">
+                <label class="label">Is the hosting ready?</label>
+                <p class="control"><span class="select">
+                    <select name="hostingReady" id="hostingReady">
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                </span></p>
+              </div>
+              <div class="checklist-question">
+                <label class="label">Is the landing page done?</label>
+                <p class="control"><span class="select">
+                    <select name="landingPage" id="landingPage">
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                </span></p>
+              </div>
+            </div>
 
-          <div class="column is-half">
-            <div class="checklist-question">
-              <label class="label">Are the social media channels created?</label>
-              <p class="control"><span class="select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-              </span></p>
+            <div class="column is-half">
+              <div class="checklist-question">
+                <label class="label">Are the social media channels created?</label>
+                <p class="control"><span class="select">
+                    <select name="socialMediaChannels" id="socialMediaChannels">
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                </span></p>
+              </div>
+              <div class="checklist-question">
+                <label class="label">Are the team emails created?</label>
+                <p class="control"><span class="select">
+                    <select name="teamEmails" id="teamEmails">
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                </span></p>
+              </div>
+              <div class="checklist-question">
+                <label class="label">Was the website proper tested?</label>
+                <p class="control"><span class="select">
+                    <select name="websiteTested" id="websiteTested">
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                </span></p>
+              </div>
+              <div class="checklist-question">
+                <label class="label">Are the backup routines in place?</label>
+                <p class="control"><span class="select">
+                    <select name="backupRoutines" id="backupRoutines">
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                </span></p>
+              </div>
             </div>
-            <div class="checklist-question">
-              <label class="label">Are the team emails created?</label>
-              <p class="control"><span class="select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-              </span></p>
+          </div>
+        </div>
+        <div class="step-5">
+          <div class="error-list"></div>
+          <div class="columns review-list">
+            <div class="column is-half">
+              <p class="review-name"><strong>Name:</strong> &nbsp; <span class="value"></span></p>
+              <p class="review-type"><strong>Type Name:</strong> &nbsp; <span class="value"></span></p>
+              <p class="review-sourceControlUrl"><strong>Source Control Url:</strong> &nbsp; <span class="value"></span></p>
+              <p class="review-taskManagementUrl"><strong>Task Management Url:</strong> &nbsp; <span class="value"></span></p>
+              <p class="review-domainUrl"><strong>Domain Url:</strong> &nbsp; <span class="value"></span></p>
+              <p class="review-description"><strong>Description:</strong> &nbsp; <span class="value"></span></p>
+              <p class="review-startDate"><strong>Start Date:</strong> &nbsp; <span class="value"></span></p>
+              <p class="review-endDate"><strong>End Date:</strong> &nbsp; <span class="value"></span></p>
             </div>
-            <div class="checklist-question">
-              <label class="label">Was the website proper tested?</label>
-              <p class="control"><span class="select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-              </span></p>
-            </div>
-            <div class="checklist-question">
-              <label class="label">Are the backup routines in place?</label>
-              <p class="control"><span class="select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-              </span></p>
+            <div class="column is-half">
+              <p class="review-colaboratorList"><strong>Colaborator List:</strong> &nbsp; <br><span class="value ident-1"></span></p>
+              <p class="review-milestoneList"><strong>Milestone Url:</strong> &nbsp; <br><span class="value ident-1"></span></p>
+              <p class="review-checklist"><strong>Checklist:</strong> &nbsp; <br><span class="value ident-1"></span></p>
             </div>
           </div>
         </div>
       </div>
-      <div class="step-5">
-        <div class="columns">
-          <div class="column is-half">
-            <p class="review-name"><strong>Name:</strong> &nbsp; <span class="value"></span></p>
-            <p class="review-type"><strong>Type Name:</strong> &nbsp; <span class="value"></span></p>
-            <p class="review-sourceControlUrl"><strong>Source Control Url:</strong> &nbsp; <span class="value"></span></p>
-            <p class="review-taskManagementUrl"><strong>Task Management Url:</strong> &nbsp; <span class="value"></span></p>
-            <p class="review-domainUrl"><strong>Domain Url:</strong> &nbsp; <span class="value"></span></p>
-            <p class="review-description"><strong>Description:</strong> &nbsp; <span class="value"></span></p>
-            <p class="review-startDate"><strong>Start Date:</strong> &nbsp; <span class="value"></span></p>
-            <p class="review-endDate"><strong>End Date:</strong> &nbsp; <span class="value"></span></p>
-          </div>
-          <div class="column is-half">
-            <p class="review-colaboratorList"><strong>Colaborator List:</strong> &nbsp; <br><span class="value ident-1"></span></p>
-            <p class="review-milestoneList"><strong>Milestone Url:</strong> &nbsp; <br><span class="value ident-1"></span></p>
-            <p class="review-checklist"><strong>Checklist:</strong> &nbsp; <br><span class="value ident-1"></span></p>
-          </div>
+      <div class="columns">
+        <div class="column controls">
+          <a class="button is-primary is-pulled-left is-large prev">Previous</a>
+          <a class="button is-primary is-pulled-right is-large next">Next</a>      
+          <button type="submit" class="button is-success is-pulled-right is-large finish">Finish</button>
         </div>
       </div>
-    </div>
-    <siv class="columns">
-      <div class="column controls">
-        <a class="button is-primary is-pulled-left is-large prev">Previous</a>
-        <a class="button is-primary is-pulled-right is-large next">Next</a>      
-        <a class="button is-success is-pulled-right is-large finish">Finish</a>      
-      </div>
-    </siv>
+    </form>
   </div>
 </section>
 
@@ -305,6 +308,8 @@
   </div>
 </footer>
 <script src="libs/siema/siema.min.js"></script>
+<script src="libs/validate/validate.min.js"></script>
+<script src="js/saveForm.js"></script>
 <script src="js/global.js"></script>
 </body>
 </html>

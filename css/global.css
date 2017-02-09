@@ -39,6 +39,10 @@
   padding-left: 15px; 
 }
 
+.error-list {
+  margin: 10px 0;
+}
+
 @media (max-width: 768px) {
   .tabs:not(:last-child) {
     margin: 0;
